@@ -21,3 +21,27 @@ li {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 4fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+  ;
+}
+
+.side-bar {
+  background-color: #ccc;
+
+  grid-area: sidebar;
+}
+
+.header {
+  background-color: #aaf;
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+}
