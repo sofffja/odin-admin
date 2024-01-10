@@ -10,10 +10,8 @@
   <div class="container">
     <header class="header">
       <div class="header-top">
-        <div class="search-bar">
-          <label for="search">🔍</label>
-          <input type="text" id="search" name="search">
-        </div>
+        <label for="search">🔍</label>
+        <input type="text" id="search" name="search">
         <div class="notification">🔔</div>
         <div class="user-icon">🙃</div>
         <div class="user-name">User Name</div>
@@ -21,11 +19,9 @@
 
       <div class="header-bottom">
         <div class="greeting">
-          <div class="user-icon-big">🙃</div>
-          <div class="greeting-text">
-            <p>Hi there,</p>
-            <p>User Name (@user)</p>
-          </div>
+          <div class="greeting-icon">🙃</div>
+          <p>Hi there,</p>
+          <p class="greeting-username">User Name (@user)</p>
         </div>
         <button class="app-button">New</button>
         <button class="app-button">Upload</button>
@@ -114,7 +110,7 @@
       <div class="announcements">
         <h2>Announcements</h2>
 
-        <div class="announcements-card">
+        <div class="announcements-card card">
           <div>
             <p class="announcement-title">News 001</p>
             <p class="announcement-preview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quisquam obcaecati expedita nihil delectus quas, impedit ea quaerat aliquam sit dolorem voluptatibus odit enim odio velit cupiditate, maxime nulla sunt.</p>
@@ -133,10 +129,35 @@
       <div class="trending">
         <h2>Trending</h2>
 
-        <div class="trending-card">
-          <div>something</div>
-          <div>something</div>
-          <div>something</div>
+        <div class="trending-card card">
+          <div class="trending-item">
+            <div class="trending-icon"></div>
+            <div class="trending-text">
+              <p class="handle">@trenduser</p>
+              <p>Trending User Name</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-icon"></div>
+            <div class="trending-text">
+              <p class="handle">@trenduser</p>
+              <p>Trending User Name</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-icon"></div>
+            <div class="trending-text">
+              <p class="handle">@trenduser</p>
+              <p>Trending User Name</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-icon"></div>
+            <div class="trending-text">
+              <p class="handle">@trenduser</p>
+              <p>Trending User Name</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
