@@ -20,7 +20,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -96,6 +98,7 @@ h1 {
 }
 
 .side-bar {
+  background-color: #f2f2f2;
   grid-area: sidebar;
   padding: var(--pad);
   display: grid;
@@ -140,7 +143,8 @@ h1 {
   padding: 0.5rem 0.75rem;
   width: clamp(50px, 50%, 800px);
   background-color: var(--light-1);
-  box-shadow: 2px 2px 4px var(--shadow);
+  /* box-shadow: 2px 2px 4px var(--shadow); */
+  box-shadow: -2px -2px 4px var(--shadow);
 }
 
 .header-bottom {
@@ -176,22 +180,20 @@ h1 {
   grid-area: content;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: var(--gap);
   padding: var(--pad);
   padding-top: 0;
 }
 
-.content-side {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
-}
-
-.projects,
-.content-side > div {
+.content>div {
   display: flex;
   flex-direction: column;
   gap: calc(var(--gap) / 2);
+}
+
+.projects {
+ grid-area: 1 / 1 / -1 / 2;
 }
 
 .content h2 {
@@ -209,12 +211,16 @@ h1 {
   gap: var(--gap);
 }
 
+.projects-cards .card {
+  border-left: 2px solid var(--accent-2);
+}
+
 .announcements-card {
   display: grid;
   gap: 8px;
 }
 
-.announcements-card > div + div{
+.announcements-card>div+div {
   border-top: 1px solid var(--dark-2);
   padding-top: 8px;
 }
@@ -247,7 +253,7 @@ h1 {
   font-weight: bold;
 }
 
-.trending-item .handle + p {
+.trending-item .handle+p {
   font-size: 0.75rem;
   margin-top: 0.25rem;
   color: var(--dark-2);
@@ -260,7 +266,9 @@ h1 {
 }
 
 .side-bar menu li:hover .emoji,
-.header .emoji:hover  {
+.header .emoji:hover,
+.current .emoji {
+  cursor: pointer;
   text-decoration: none;
   box-shadow: -2px -2px 4px var(--shadow), 1px 1px 4px var(--light-1);
 }
